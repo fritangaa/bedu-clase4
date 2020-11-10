@@ -1,6 +1,111 @@
-.header{
-    height: 50px;
-    width: 100%;
-    background-color: aquamarine;
+.container{
+  
+  
+  display: flex;
+  /*flex-direction: row;*/
+  /*flex-wrap: wrap;*/
+  flex-wrap:wrap;
+  /*flex-flow:wrap;*/
+  /*eje x*/
+  justify-content: space-between;
+  /*eje y*/
+  /*align-items: center;*/
+  /*align-content: space-around;*/
+  width: 100%;
+  height: 800px;
+  background-color: #025157;
+
+
 }
 
+.item{
+  
+  
+  background-color: #fff;
+  width: 45%;
+  height: 40%;
+
+  display: flex;
+
+}
+
+.item .texto{
+  width:75%;
+ }
+
+.item .texto h2{
+ color: grey;
+}
+
+.item .texto p{
+  color: grey;
+}
+
+.item .imagen{
+  width:25%;
+ }
+
+.item .imagen img{
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+
+
+
+
+
+
+
+
+.features{
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+
+article{
+  background-color: ghostwhite;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+.item1{
+  grid-area: header;
+}
+.item2{
+  grid-area: menu;
+}
+.item3{
+  grid-area: main;
+}
+.item4{
+  grid-area: derecha;
+}
+.item5{
+  grid-area: footer;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-areas: 
+  "header header header header"
+  "main main main derecha"
+  "menu menu menu menu"
+  "footer footer footer footer";
+  gap: 10px;
+  background: #025157;
+  padding: 10px;
+}
+
+.grid-container > div{
+  background-color: aliceblue;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+  height: 1400px;
+}
